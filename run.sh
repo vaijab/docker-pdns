@@ -11,7 +11,7 @@ sed -i /etc/pdns/pdns.conf \
   -e "s/PDNS_DB_PASSWORD/${PDNS_DB_PASSWORD}/" \
   -e "s/PDNS_DB_HOST/${PDNS_DB_HOST}/" \
   -e "s/PDNS_DB_NAME/${PDNS_DB_NAME}/" \
-  -e "s/PDNS_WEBSERVER/${PDNS_WEBSERVER}/" \
+  -e "s/PDNS_WEBSERVER/${PDNS_WEBSERVER}/"
 
 if [[ $# -lt 1 ]] || [[ "$1" == "--"* ]]; then
   exec /usr/sbin/pdns_server "$@"
